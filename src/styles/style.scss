@@ -1,0 +1,84 @@
+@import 'config.scss';
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: $cream;
+}
+
+.card {
+    background: $white;
+    border-radius: 16px;
+    display: flex;
+    width: 576px;
+    height: 420px;
+    box-shadow: 5px 3px 8px 1px rgba(0, 0, 0, 0.15);
+
+    .media {
+        img {
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+            height: 420px;
+        }
+    }
+
+    .content {
+        width: 50%;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .category {
+            color: $darkGrayishBlue;
+            font-weight: 500;
+            letter-spacing: 3px;
+        }
+
+        .title {
+            font-family: 'Fraunces';
+            font-weight: 700;
+        }
+
+        .description {
+            color: $darkGrayishBlue;
+        }
+
+        .prices {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+
+            .current-price {
+                color: $darkCyan;
+                font-size: 2rem;
+                font-weight: 700;
+                font-family: 'Fraunces';
+            }
+
+            .original-price {
+                color: $darkGrayishBlue;
+            }
+        }
+
+        .add-to-cart {
+            border: none;
+            cursor: pointer;
+            padding: 16px 32px;
+            border-radius: 8px;
+            background: $darkCyan;
+            color: $white;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+
+            &:hover {
+                background-color: darken($darkCyan, 20%);
+            }
+        }
+    }
+}
+
+@import 'media.scss';
